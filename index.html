@@ -8,8 +8,19 @@
 </head>
 <body>
     <h1>Plant Moisture Tracker</h1>
-    <button onclick="addPlant()">Add Plant</button>
+    <button onclick="showModal()">Add Plant</button>
     <div id="plants-container"></div>
+
+    <!-- Modal for selecting plant size -->
+    <div id="plant-size-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Select Plant Size</h2>
+            <button onclick="addPlant('small')">Small</button>
+            <button onclick="addPlant('medium')">Medium</button>
+            <button onclick="addPlant('large')">Large</button>
+        </div>
+    </div>
 
     <script src="app/app.js"></script>
 </body>
