@@ -1,100 +1,196 @@
+* {
+  font-family: "Pacifico", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f0f8ff;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
 h1 {
-    color: #2e8b57;
-    margin-top: 20px;
+  color: #2e8b57;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 button {
-    background-color: #2e8b57;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.2s ease-in-out;
 }
-
 button:hover {
-    background-color: #3cb371;
+  background-color: #3cb371;
 }
 
-#plants-container {
+nav {
+  width: 100%;
+  background-color: #2e8b57;
+  height: 50px;
+  ul {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    li {
+      list-style-type: none;
+      a {
+        color: lightgoldenrodyellow;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: lightgreen;
+          text-decoration: underline;
+        }
+      }
+    }
+    .logoHolder {
+      color: #3cb371;
+      h3 {
+        font-size: 22px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: lightgoldenrodyellow;
+        }
+      }
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.pageContent {
+  margin-top: 20px;
+  min-height: calc(100vh - 120px);
+}
+
+.notesList {
+  width: 300px;
+  margin: 0 auto;
+  ul {
+    margin-left: -25px;
+    text-align: left;
+    li {
+      margin-top: 20px;
+    }
+  }
+}
+
+.plantsHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .plant-container {
-    border: 2px solid #2e8b57;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    background-color: #fff;
-    width: 300px;
-    text-align: center;
+  border: 2px solid #2e8b57;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  }
+  h2 {
+    color: #2e8b57;
+    font-size: 30px;
+  }
 }
 
-#plant-image {
-    width: 100%;
-    height: auto;
-    max-width: 100px; /* Set a maximum width */
-    max-height: 100px; /* Set a maximum height */
-    border-radius: 10px;
-    transition: opacity 0.4s ease-in-out;
-    opacity: 1;
+.plant-image {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  transition: background-image 0.2s ease-in-out;
 }
 
-.fade-out {
-    opacity: 0;
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  p {
+    padding-top: 5px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: lightgreen;
+      text-decoration: underline;
+    }
+  }
 }
 
-.fade-in {
-    opacity: 1;
-}
-
+/* Modal */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 300px;
-    text-align: center;
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 350px;
+  min-height: 200px;
+  text-align: center;
+  border-radius: 25px;
+  .modalText {
+    padding: 25px;
+  }
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

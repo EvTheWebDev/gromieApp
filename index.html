@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant Moisture Tracker</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <h1>Plant Moisture Tracker</h1>
-    <button onclick="showModal()">Add Plant</button>
-    <div id="plants-container"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gromie Live Test Build</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <div class="logoHolder">
+            <h3>Gromie</h3>
+          </div>
+        </li>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a target="_blank" href="https://evportfolio.vercel.app/">The Dev</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/evanjschmitt/gromieApp"
+            >The Code</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="pageContent">
+      <h1>Gromie: Horticultural Helper</h1>
+      <div class="notesList">
+        <h3>Important Notes:</h3>
+        <ul>
+          <li>
+            The user will eventually be able to save/name plants, but for now
+            they can just add them.
+          </li>
+          <li>
+            The "Check Moisture Level" button currently floats a random
+            number, but it will <i>eventually</i> pull ranges from a API for
+            plant growth and compare that to the soil sensor level.
+          </li>
+        </ul>
+      </div>
+      <div class="bigLogo">
+          <img src="images/Gromie Logo.png" alt="Our Logo">
+      </div>
 
-    <!-- Modal for selecting plant size -->
+      <button onclick="showModal()">New Plant</button>
+      <div class="plantsHolder" id="plants-container"></div>
+    </div>
+    <footer>
+      <p>
+        Gromie App Test Build #1 |
+        <a target="_blank" href="https://github.com/evanjschmitt/gromieApp"
+          >GitHub Link</a
+        >
+      </p>
+    </footer>
+
     <div id="plant-size-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Select Plant Size</h2>
-            <button onclick="addPlant('small')">Small</button>
-            <button onclick="addPlant('medium')">Medium</button>
-            <button onclick="addPlant('large')">Large</button>
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modalText">
+          <h2>Select Plant Size</h2>
+          <button onclick="addPlant('small')">Small</button>
+          <button onclick="addPlant('medium')">Medium</button>
+          <button onclick="addPlant('large')">Large</button>
         </div>
+      </div>
     </div>
 
     <script src="app/app.js"></script>
-</body>
+  </body>
 </html>

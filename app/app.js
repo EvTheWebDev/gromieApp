@@ -16,13 +16,14 @@ function addPlant(size) {
     plantContainer.innerHTML = `
         <h2>Plant ${plantCount}</h2>
         <div id="plant-status-${plantCount}">
-            <img id="plant-image-${plantCount}" src="images/${size}/happyPlant.png" alt="Plant Image">
+            <div id="plant-image-${plantCount}" class="plant-image" style="background-image: url('');"></div>
             <p id="moisture-level-${plantCount}">Moisture Level: --</p>
         </div>
         <button onclick="updateMoistureLevel(${plantCount}, '${size}')">Check Moisture Level</button>
     `;
     document.getElementById('plants-container').appendChild(plantContainer);
     closeModal();
+    updateMoistureLevel(plantCount, size);
 }
 
 function updateMoistureLevel(plantId, size) {
@@ -36,16 +37,16 @@ function updateMoistureLevel(plantId, size) {
     const plantImage = document.getElementById(`plant-image-${plantId}`);
 
     if (moistureLevel > 75) {
-        plantImage.src = `images/${size}/happyPlant.png`;
+        plantImage.style.backgroundImage = `url('images/${size}/happyPlant.png')`;
         plantImage.alt = "High Moisture Plant";
     } else if (moistureLevel > 50) {
-        plantImage.src = `images/${size}/mehPlant.png`;
+        plantImage.style.backgroundImage = `url('images/${size}/mehPlant.png')`;
         plantImage.alt = "Medium Moisture Plant";
     } else if (moistureLevel > 25) {
-        plantImage.src = `images/${size}/badPlant.png`;
+        plantImage.style.backgroundImage = `url('images/${size}/badPlant.png')`;
         plantImage.alt = "Low Moisture Plant";
     } else {
-        plantImage.src = `images/${size}/sadPlant.png`;
+        plantImage.style.backgroundImage = `url('images/${size}/sadPlant.png')`;
         plantImage.alt = "Very Low Moisture Plant";
     }
 }
