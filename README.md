@@ -2,6 +2,8 @@
 
 Welcome to the Gromie App! This application helps you monitor the moisture levels of your plants and provides visual feedback based on the moisture levels.
 
+
+
 ## Features
 
 - 🌱 Add new plants and specify their size.
@@ -13,6 +15,8 @@ Welcome to the Gromie App! This application helps you monitor the moisture level
 1. Click the "Add Plant" button to add a new plant.
 2. Select the size of the plant.
 3. Click the "Check Moisture Level" button to update the moisture level and see the visual feedback.
+
+## Live Build: [CLICK HERE](https://gromie.vercel.app/)
 
 ## Showcase
 
