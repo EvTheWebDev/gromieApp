@@ -37,16 +37,16 @@ function updateMoistureLevel(plantId, size) {
     const plantImage = document.getElementById(`plant-image-${plantId}`);
 
     if (moistureLevel > 75) {
-        plantImage.style.backgroundImage = `url('images/${size}/happyPlant.png')`;
+        plantImage.style.backgroundImage = `url('assets/images/${size}/happyPlant.png')`;
         plantImage.alt = "High Moisture Plant";
     } else if (moistureLevel > 50) {
-        plantImage.style.backgroundImage = `url('images/${size}/mehPlant.png')`;
+        plantImage.style.backgroundImage = `url('assets/images/${size}/mehPlant.png')`;
         plantImage.alt = "Medium Moisture Plant";
     } else if (moistureLevel > 25) {
-        plantImage.style.backgroundImage = `url('images/${size}/badPlant.png')`;
+        plantImage.style.backgroundImage = `url('assets/images/${size}/badPlant.png')`;
         plantImage.alt = "Low Moisture Plant";
     } else {
-        plantImage.style.backgroundImage = `url('images/${size}/sadPlant.png')`;
+        plantImage.style.backgroundImage = `url('assets/images/${size}/sadPlant.png')`;
         plantImage.alt = "Very Low Moisture Plant";
     }
 }

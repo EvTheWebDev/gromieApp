@@ -1,17 +1,26 @@
+@font-face {
+  font-family: "AlongSans";
+  src: url("../assets/fonts/alongSans/AlongSanss2-Regular.otf");
+}
+
+@font-face {
+  font-family: "bpreplay";
+  src: url("../assets/fonts/bpreplay/BPreplay.otf");
+}
+
 * {
-  font-family: "Pacifico", cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
   text-align: center;
   background-color: #f0f8ff;
   margin: 0;
   padding: 0;
   min-height: 100%;
+  font-family: "bpreplay", sans-serif;
 }
 
 h1 {
@@ -62,6 +71,7 @@ nav {
       color: #3cb371;
       h3 {
         font-size: 22px;
+        font-family: "AlongSans", sans-serif;
         transition: all 0.2s ease-in-out;
         &:hover {
           color: lightgoldenrodyellow;
@@ -136,6 +146,7 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+  font-family: "AlongSans", sans-serif;
   p {
     padding-top: 5px;
   }
