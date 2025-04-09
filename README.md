@@ -25,16 +25,16 @@ Here are some of the images used in the app to represent different moisture leve
 **NOTE:** These sprites are very much placeholders, and are subject to change.
 
 ### Happy Plant (High Moisture)
-![Happy Plant](images/large/happyPlant.png)
+![Happy Plant](assets/images/large/happyPlant.png)
 
 ### Meh Plant (Medium Moisture)
-![Meh Plant](images/large/mehPlant.png)
+![Meh Plant](assets/images/large/mehPlant.png)
 
 ### Bad Plant (Low Moisture)
-![Bad Plant](images/large/badPlant.png)
+![Bad Plant](assets/images/large/badPlant.png)
 
 ### Sad Plant (Very Low Moisture)
-![Sad Plant](images/large/sadPlant.png)
+![Sad Plant](assets/images/large/sadPlant.png)
 
 
 ---
