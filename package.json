@@ -1,0 +1,16 @@
+{
+  "name": "gromieapp",
+  "version": "1.0.0",
+  "description": "Welcome to the Gromie App! This application helps you monitor the moisture levels of your plants and provides visual feedback based on the moisture levels.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.86.3",
+    "sweetalert2": "^11.19.1"
+  }
+}

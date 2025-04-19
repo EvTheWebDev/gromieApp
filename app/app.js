@@ -26,6 +26,8 @@ function addPlant(size) {
     updateMoistureLevel(plantCount, size);
 }
 
+
+//Test Update Functionality
 function updateMoistureLevel(plantId, size) {
     // Generate a random number between 1 and 100
     const moistureLevel = Math.floor(Math.random() * 100) + 1;
@@ -50,3 +52,17 @@ function updateMoistureLevel(plantId, size) {
         plantImage.alt = "Very Low Moisture Plant";
     }
 }
+
+///Real Sensor Functionality
+function checkMoisture() {
+    fetch('http://192.168.159.139/update') //IP Address for Arduino on Ev Hotspot
+      .then(response => response.text())
+      .then(data => {
+        console.log('Arduino says:', data);
+        alert("Gromie checked the soil!");
+      })
+      .catch(error => {
+        console.error('Error contacting Gromie:', error);
+        alert("Couldn't reach Gromie. Is it powered on and connected?");
+      });
+  }

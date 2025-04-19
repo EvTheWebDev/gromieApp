@@ -25,7 +25,6 @@
         </li>
       </ul>
     </nav>
-
     <div class="pageContent">
       <h1>Gromie: Horticultural Helper</h1>
       <div class="notesList">
@@ -36,23 +35,19 @@
             they can just add them.
           </li>
           <li>
-            The <b>"Check Moisture Level"</b> button now sends a real-time request
-            to your Gromie device!
+            The "Check Moisture Level" button currently floats a random
+            number, but it will <i>eventually</i> pull ranges from a API for
+            plant growth and compare that to the soil sensor level.
           </li>
         </ul>
       </div>
-
       <div class="bigLogo">
-        <img src="assets/images/Gromie Logo.png" alt="Our Logo" />
+          <img src="assets/images/Gromie Logo.png" alt="Our Logo">
       </div>
 
-      <!-- NEW BUTTON to contact Arduino -->
-      <button onclick="checkMoisture()">Check Moisture Level</button>
-      
       <button onclick="showModal()">New Plant</button>
       <div class="plantsHolder" id="plants-container"></div>
     </div>
-
     <!-- Footer -->
     <footer>
       <p>
@@ -62,8 +57,7 @@
         >
       </p>
     </footer>
-
-    <!-- Add Plant Modal -->
+<!-- Add Plant Modal -->
     <div id="plant-size-modal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -75,7 +69,7 @@
         </div>
       </div>
     </div>
-    
+
     <script src="app/app.js"></script>
   </body>
 </html>
